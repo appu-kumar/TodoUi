@@ -1,6 +1,6 @@
 # Todo App Frontend
 
-![Todo App Screenshot](https://imgur.com/eJendji)
+![Todo App Screenshot](https://i.imgur.com/bh9VJOk.png)
 
 # Project Overview
 A simple and intuitive Todo App to help you manage your tasks efficiently.
