@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskList = document.getElementById('taskList');
 
     const baseUrl = 'http://localhost:8080';
+
     // Fetch tasks from the backend and display them
     const fetchAndDisplayTasks = async () => {
         try {
@@ -13,14 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             taskList.innerHTML = '';
             tasks.forEach(task => {
+                console.log(typeof task);
+                console.log(task);
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
-                    <strong>${task.title}</strong>
-                    <p>${task.description}</p>
+                    <p><strong>Title:${task.title}</strong></p>
+                    <p>Task Description:${task.description}</p>
                     <p>Due Date: ${task.dueDate}</p>
                     <p>Completed:${task.completed}</p>
-                    <button class="editBtn" onclick="editTask(${task.id}, ${task})">Edit</button>
-                    <button class="deleteBtn" onclick="deleteTask(${task.id})">Delete</button>
+                    <button class="editBtn btn" onclick="editTask(${task.id}, ${JSON.stringify(task)})">Edit</button>
+                    <button class="deleteBtn btn" onclick="deleteTask(${task.id})">Delete</button>
 
                 `;
 
@@ -76,8 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Implement the logic to fetch the task data by ID and populate the form for editing
         // Update the form action to perform an update instead of creating a new task  editTask  
         try {
-
-            console.log(task);
             const taskEndPoint = '/task';
             const apiUrl = `${baseUrl}${taskEndPoint}/${taskId}`;
             console.log(apiUrl);
@@ -86,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-
-                body: JSON.stringify(task)
+               
+                body: JSON.stringify(task),
             });
 
             if (response.ok) {

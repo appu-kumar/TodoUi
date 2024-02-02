@@ -3,7 +3,7 @@ body {
     margin: 20px;
 }
 
-#app {
+.container {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -34,4 +34,18 @@ li {
 
 .completed {
     background-color: #e6ffe6;
+}
+
+.editBtn
+{
+    background-color:rgb(107, 158, 30);
+}
+
+.deleteBtn
+{
+    background-color:rgba(255, 0, 0, 0.884);
+}
+
+.btn{
+    border-radius:8px;
 }
