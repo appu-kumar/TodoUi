@@ -1,6 +1,6 @@
 # Todo App Frontend
 
-![Todo App Screenshot](https://drive.google.com/file/d/1XldlpbRMrZ5315CIipPjhWd6Dco0z8ny/view?usp=sharing)
+![Todo App Screenshot](https://imgur.com/a/FsEoo95)
 
 # Project Overview
 A simple and intuitive Todo App to help you manage your tasks efficiently.
@@ -14,7 +14,7 @@ A simple and intuitive Todo App to help you manage your tasks efficiently.
 - Clean and user-friendly interface.
 
 ## Getting Started
- 1.Provide instructions on setting up and running your frontend project locally.
+ 1. Provide instructions on setting up and running your front-end project locally.
 ### Prerequisites
 
 -Make sure you have the following tools installed:
